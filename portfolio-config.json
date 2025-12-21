@@ -1,0 +1,139 @@
+{
+  "personal": {
+    "name": "Ashish Dubey",
+    "title": "Aerospace Software Engineer",
+    "tagline": "Building the Future of Flight",
+    "description": "15+ years of expertise in safety-critical embedded systems for aerospace. From Boeing 787 to cutting-edge eVTOL programs, I architect software that powers the next generation of aviation.",
+    "email": "ashishdubeyuw@gmail.com",
+    "phone": "+1 (425) 560-5118",
+    "linkedin": "https://www.linkedin.com/in/ashishdubeyuw/",
+    "location": "Lynnwood, Washington, US"
+  },
+  
+  "about": {
+    "title": "Crafting Mission-Critical Software",
+    "paragraphs": [
+      "I'm a Senior Advanced Embedded Engineer at Honeywell Aerospace with over 15 years of experience developing safety-critical flight control systems. My work has directly contributed to some of aviation's most advanced aircraft.",
+      "Currently pursuing my M.S. in Information Systems at the University of Washington's prestigious Michael G. Foster School of Business, I'm expanding my expertise into AI, ML, and cloud computing to shape the future of aerospace technology.",
+      "From Phoenix to Seattle, I've delivered $3M+ in cost savings through intelligent automation and led teams building the software that keeps aircraft safe in the skies."
+    ]
+  },
+  
+  "stats": [
+    {
+      "icon": "🎯",
+      "number": "15+",
+      "label": "Years Experience"
+    },
+    {
+      "icon": "💰",
+      "number": "$3M+",
+      "label": "Cost Savings"
+    },
+    {
+      "icon": "✨",
+      "number": "0.001",
+      "label": "Defect Density"
+    },
+    {
+      "icon": "🔬",
+      "number": "3",
+      "label": "Trade Secrets"
+    }
+  ],
+  
+  "experience": [
+    {
+      "logo": "H",
+      "title": "Senior Advanced Embedded Engineer",
+      "company": "Honeywell Aerospace",
+      "location": "Phoenix, USA",
+      "duration": "Jul 2022 - Jun 2025",
+      "description": "Leading safety-critical software integration for next-generation eVTOL programs. Architected A429 drivers and RS422 systems while revolutionizing test automation with Python and LabVIEW, delivering $1M+ in savings and 80% cycle time reduction.",
+      "achievements": ["eVTOL Integration", "$1M+ Savings", "Level-A Software"]
+    },
+    {
+      "logo": "H",
+      "title": "Advanced Embedded Engineer",
+      "company": "Honeywell Aerospace",
+      "location": "Phoenix, USA",
+      "duration": "May 2017 - Jul 2022",
+      "description": "Designed flight control systems for Boeing 787 and Comac 919 using Embedded C on GHS & DEOS RTOS. Created critical airborne applications including FADEC and Landing Gear Control systems with industry-leading 0.001 defect density.",
+      "achievements": ["Boeing 787", "FADEC Systems", "$2M Automation"]
+    },
+    {
+      "logo": "H",
+      "title": "Senior Software Engineer",
+      "company": "Honeywell Aerospace",
+      "location": "Phoenix, USA",
+      "duration": "May 2013 - May 2017",
+      "description": "Developed flight control software for Embraer ERJ170, Gulfstream G650, and Comac ARJ21. Fixed flight test defects with 100% accuracy while creating automation tools that saved 3,000 man-hours across four programs.",
+      "achievements": ["Gulfstream G650", "HIL Testing", "DO-178C"]
+    },
+    {
+      "logo": "A",
+      "title": "Software Engineer",
+      "company": "Alten",
+      "location": "Bengaluru, India",
+      "duration": "May 2009 - May 2013",
+      "description": "Designed software modules for Boeing 787 Wing Ice Protection Systems with 0.02% defect density. Architected flash memory drivers and developed boot-up code for mission-critical systems.",
+      "achievements": ["Boeing 787", "Flash Drivers", "Safety Critical"]
+    }
+  ],
+  
+  "skills": [
+    {
+      "icon": "💻",
+      "title": "Programming",
+      "tags": ["Embedded C", "Python", "C#", "MATLAB", "Simulink"]
+    },
+    {
+      "icon": "🖥️",
+      "title": "RTOS & Platforms",
+      "tags": ["DEOS", "Green Hills A653", "VxWorks", "Bare Metal"]
+    },
+    {
+      "icon": "🤖",
+      "title": "AI & ML",
+      "tags": ["PyTorch", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"]
+    },
+    {
+      "icon": "🔧",
+      "title": "Hardware",
+      "tags": ["PPC 750", "MIPS RM7965", "ARM A53", "R5 Cortex", "Xilinx Zynq"]
+    },
+    {
+      "icon": "📡",
+      "title": "Protocols",
+      "tags": ["ARINC 429", "CAN Bus", "ARINC 664", "RS422", "TFTP"]
+    },
+    {
+      "icon": "✈️",
+      "title": "Standards",
+      "tags": ["DO-178C", "DO-254", "Six Sigma", "Agile", "CI/CD"]
+    }
+  ],
+  
+  "locations": [
+    {
+      "title": "Phoenix, Arizona",
+      "subtitle": "Honeywell Aerospace • Innovation Center",
+      "image": "https://images.unsplash.com/photo-1528127269322-539801943592?w=1200&q=80"
+    },
+    {
+      "title": "Seattle, Washington",
+      "subtitle": "Current Home • Tech Innovation Hub",
+      "image": "https://images.unsplash.com/photo-1542223189-67a03fa0f0bd?w=1200&q=80"
+    },
+    {
+      "title": "UW Foster School",
+      "subtitle": "M.S. Information Systems • Class of 2026",
+      "image": "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=1200&q=80"
+    },
+    {
+      "title": "Lynnwood, Washington",
+      "subtitle": "Home Base • Pacific Northwest Living",
+      "image": "https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=1200&q=80"
+    }
+  ]
+}
