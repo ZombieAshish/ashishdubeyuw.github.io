@@ -93,17 +93,34 @@ function populatePage() {
         </div>
     `).join('');
     
-    // Update locations
+    // Update locations with slideshow support
     const locationsGrid = document.getElementById('locations-grid');
-    locationsGrid.innerHTML = config.locations.map(loc => `
-        <div class="location-card">
-            <img src="${loc.image}" alt="${loc.title}">
-            <div class="location-overlay">
-                <div class="location-title">${loc.title}</div>
-                <div class="location-subtitle">${loc.subtitle}</div>
+    locationsGrid.innerHTML = config.locations.map((loc, index) => {
+        const images = Array.isArray(loc.images) ? loc.images : [loc.image];
+        return `
+            <div class="location-card" data-location-index="${index}">
+                <div class="location-slideshow">
+                    ${images.map((img, imgIndex) => `
+                        <img src="${img}" alt="${loc.title}" class="location-slide ${imgIndex === 0 ? 'active' : ''}" data-slide="${imgIndex}">
+                    `).join('')}
+                </div>
+                ${images.length > 1 ? `
+                    <div class="location-dots">
+                        ${images.map((_, dotIndex) => `
+                            <span class="location-dot ${dotIndex === 0 ? 'active' : ''}" data-dot="${dotIndex}"></span>
+                        `).join('')}
+                    </div>
+                ` : ''}
+                <div class="location-overlay">
+                    <div class="location-title">${loc.title}</div>
+                    <div class="location-subtitle">${loc.subtitle}</div>
+                </div>
             </div>
-        </div>
-    `).join('');
+        `;
+    }).join('');
+
+    // Initialize slideshows
+    initializeSlideshows();
     
     // Update contact section
     const contactCards = document.getElementById('contact-cards');
@@ -240,6 +257,45 @@ function initializeAnimations() {
 
     document.querySelectorAll('.stat-number').forEach(stat => {
         statsObserver.observe(stat);
+    });
+
+    function initializeSlideshows() {
+    const locationCards = document.querySelectorAll('.location-card');
+    
+    locationCards.forEach(card => {
+        const slides = card.querySelectorAll('.location-slide');
+        const dots = card.querySelectorAll('.location-dot');
+        
+        if (slides.length <= 1) return; // Skip if only one image
+        
+        let currentSlide = 0;
+        
+        // Auto-advance slides every 4 seconds
+        const interval = setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            
+            currentSlide = (currentSlide + 1) % slides.length;
+            
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }, 4000);
+        
+        // Manual navigation with dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', (e) => {
+                e.stopPropagation();
+                clearInterval(interval);
+                
+                slides[currentSlide].classList.remove('active');
+                dots[currentSlide].classList.remove('active');
+                
+                currentSlide = index;
+                
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+            });
+        });
     });
 }
 
